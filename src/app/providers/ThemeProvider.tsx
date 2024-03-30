@@ -61,7 +61,7 @@ export const ThemeProvider = ({ children }: React.PropsWithChildren) => {
     },
     fontSizes: {
       xs: "8px",
-      sm: "12px",
+      sm: "14px",
       md: "16px",
       lg: "20px",
       xl: "24px",
@@ -74,6 +74,7 @@ export const ThemeProvider = ({ children }: React.PropsWithChildren) => {
     <MantineProvider
       theme={theme}
       withGlobalClasses
+      defaultColorScheme="dark"
       withCssVariables={true}
       children={children}
     />

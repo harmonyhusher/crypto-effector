@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Currency } from "@/shared/api/list/types";
-import { Box, Flex, Group } from "@mantine/core";
+import { Box, Card, Flex } from "@mantine/core";
 import { ListApi } from "@/shared/api/list";
 import { Input } from "@/shared/UIKit/Input";
 import { useQuery } from "@tanstack/react-query";
@@ -15,12 +15,14 @@ export const CoinList = () => {
     queryFn: () => instance.getList({ limit: 20, currency: Currency.USD }),
     queryKey: ["list"],
   });
-  return (
-    <Box maw={400}>
-      <Flex gap="md" direction="column" wrap="wrap" p={'sm'}>
-        <Input />
-        <List data={data} isSuccess={isSuccess} isLoading={isLoading} />
-      </Flex>
+  return ( 
+    <Box maw={300}>
+      <Card withBorder padding={'xs'}>
+        <Flex gap="md" direction="column" wrap="wrap" p={'sm'}>
+          <Input />
+          <List data={data} isSuccess={isSuccess} isLoading={isLoading} />
+        </Flex>
+      </Card>
     </Box>
   );
 };
