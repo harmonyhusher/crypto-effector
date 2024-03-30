@@ -38,7 +38,7 @@ export const ThemeProvider = ({ children }: React.PropsWithChildren) => {
         "#4169E1",
       ],
       grey: [
-        "#808080",
+        "#2e2e2e",
         "#A9A9A9",
         "#D3D3D3",
         "#696969",
@@ -73,9 +73,7 @@ export const ThemeProvider = ({ children }: React.PropsWithChildren) => {
   return (
     <MantineProvider
       theme={theme}
-      withGlobalClasses
       defaultColorScheme="dark"
-      withCssVariables={true}
       children={children}
     />
   );

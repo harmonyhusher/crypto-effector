@@ -1,1 +1,0 @@
-export { CoinList } from "./CoinList";

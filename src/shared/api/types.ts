@@ -4,6 +4,12 @@ export interface ResponseType {
   error?: string;
 }
 
+export enum HTTPAuth {
+  BEARER = "Bearer",
+  XAPIKEY = "X-API-Key",
+}
+
+
 export enum HTTPMethod {
   GET = "GET",
   POST = "POST",

@@ -1,8 +1,13 @@
-import MainList from "@/features/MainList/MainList";
-import { CoinList } from "@/widgets/CoinList";
-
+"use client";
+import { Graph } from "@/entities/graph";
+import { DraggableList } from "@/features/draggable-list";
 const Home = () => {
-  return <MainList />;
+  return (
+    <div>
+      <DraggableList />
+      {/* <Graph /> */}
+    </div>
+  );
 };
 
 export default Home;

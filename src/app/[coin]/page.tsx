@@ -1,4 +1,4 @@
-import { CoinList } from "@/widgets/CoinList";
+import { CoinList } from "@/widgets/list";
 
 const Home = () => {
   return (

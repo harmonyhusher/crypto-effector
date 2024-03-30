@@ -1,19 +1,27 @@
-import { HTTPMethod } from "./types";
+import { HTTPAuth, HTTPMethod } from "./types";
 
 export default async function request<TResponse, TRequest = any>(
   url: string,
   method: HTTPMethod,
+  authType: HTTPAuth,
   body?: TRequest,
   headers?: HeadersInit
-): Promise<TResponse & ResponseType> {
+): Promise<TResponse> {
   const baseURL = process.env.NEXT_PUBLIC_API_URL;
   const token = process.env.NEXT_PUBLIC_API_TOKEN;
+
+  const authHeaders = {
+    Bearer: (token: string) => ({ Authorization: `Bearer ${token}` }),
+    "X-API-Key": (apiKey: string) => ({ "X-API-Key": apiKey }),
+  };
+
+  const selectedAuthHeader = authHeaders[authType](token as string);
 
   const ans = await fetch(baseURL + url, {
     method,
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`,
+      ...selectedAuthHeader,
       ...headers,
     },
     body: JSON.stringify(body),

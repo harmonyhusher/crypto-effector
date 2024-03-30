@@ -4,7 +4,7 @@ const nextConfig = {
         remotePatterns: [
           {
             protocol: 'https',
-            hostname: `${process.env.NEXT_PUBLIC_API_URL}`,
+            hostname: `static.coinstats.app`,
           },
         ],
       },
