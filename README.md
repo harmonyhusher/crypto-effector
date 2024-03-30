@@ -1,2 +1,2 @@
 # crypto-effector
-Crypto-app with effector.
+Crypto-app with effector and more.
