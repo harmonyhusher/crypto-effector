@@ -1,4 +1,4 @@
-import { Card, Flex, Paper, Skeleton, Text, Title } from "@mantine/core";
+import { Card, Flex, Paper, Skeleton, Text, Title, useMantineTheme } from "@mantine/core";
 import Image from "next/image";
 import React from "react";
 import cs from "./Coin.module.scss";
@@ -12,6 +12,7 @@ type Props = {
 };
 
 export const Coin = ({ price, img, change, name, bone }: Partial<Props>) => {
+
   if (bone) {
     return (
       <>

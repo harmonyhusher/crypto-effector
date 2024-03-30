@@ -1,4 +1,4 @@
-import { CoinList } from "@components/widgets/CoinList";
+import { CoinList } from "@/widgets/CoinList";
 
 const Home = () => {
   return (

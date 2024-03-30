@@ -1,12 +1,12 @@
 "use client";
 import React from "react";
-import { Currency } from "@components/shared/api/list/types";
-import { Flex, Group } from "@mantine/core";
-import { ListApi } from "@components/shared/api/list";
-import { Input } from "@components/shared/Input";
+import { Currency } from "@/shared/api/list/types";
+import { Box, Flex, Group } from "@mantine/core";
+import { ListApi } from "@/shared/api/list";
+import { Input } from "@/shared/UIKit/Input";
 import { useQuery } from "@tanstack/react-query";
 import cs from "./CoinList.module.scss";
-import { List } from "@components/entities/List";
+import { List } from "@/entities/List";
 
 const instance = new ListApi();
 
@@ -16,11 +16,11 @@ export const CoinList = () => {
     queryKey: ["list"],
   });
   return (
-    <Group className={cs.group}>
+    <Box maw={400}>
       <Flex gap="md" direction="column" wrap="wrap" p={'sm'}>
         <Input />
         <List data={data} isSuccess={isSuccess} isLoading={isLoading} />
       </Flex>
-    </Group>
+    </Box>
   );
 };

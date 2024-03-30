@@ -18,9 +18,8 @@
       }
     ],
     "paths": {
-      "@components/*": ["./src/*"],
+      "@/*": ["./src/*"],
       "@providers/*": ["./src/app/providers/*"],
-      "@api*": ["src/shared/api/api.ts"],
       "@public/*": ["./src/public/*"]
     }
   },

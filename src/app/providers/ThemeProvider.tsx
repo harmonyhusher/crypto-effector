@@ -1,6 +1,5 @@
 import { createTheme, MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
-import { MantineSize, MantineRadiusValues } from "@mantine/core";
 
 import React from "react";
 

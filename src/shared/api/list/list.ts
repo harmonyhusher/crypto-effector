@@ -1,5 +1,5 @@
 /* eslint-disable class-methods-use-this */
-import request from "@components/shared/api/api";
+import request from "@/shared/api/api";
 import { HTTPMethod } from "../types";
 import { ListaApiParams } from "./types";
 import { RootInterface } from "./types";

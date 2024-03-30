@@ -1,4 +1,4 @@
-import { RootInterface } from '@components/shared/api/list/types'
+import { RootInterface } from '@/shared/api/list/types'
 import React from 'react'
 import { Coin } from '../Coin';
 import { Flex, ScrollArea } from '@mantine/core';
