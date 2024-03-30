@@ -15,10 +15,10 @@ export const Coin = ({ price, img, change, name, bone }: Partial<Props>) => {
   if (bone) {
     return (
       <>
-        <Skeleton height={10} mt={6} radius="xl" />
-        <Skeleton circle />
+        <Skeleton height={50} circle mb="xl" />
+        <Skeleton height={8} radius="xl" />
         <Skeleton height={8} mt={6} radius="xl" />
-        <Skeleton height={8} mt={6} radius="xl" />
+        <Skeleton height={8} mt={6} width="70%" radius="xl" />
       </>
     );
   }
@@ -26,7 +26,7 @@ export const Coin = ({ price, img, change, name, bone }: Partial<Props>) => {
   return (
     <Card shadow="xs" radius="lg" p={"lg"} className={cs.card}>
       <Text size={"sm"}>{name}</Text>
-      {/* <Image fill src={img} alt={name} /> */}
+      {img && <Image fill src={img!} alt={name!} />}
       <Text>{price}</Text>
     </Card>
   );

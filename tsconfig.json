@@ -20,7 +20,7 @@
     "paths": {
       "@components/*": ["./src/*"],
       "@providers/*": ["./src/app/providers/*"],
-      "@api*": ["./src/app/api/api.ts"],
+      "@api*": ["src/shared/api/api.ts"],
       "@public/*": ["./src/public/*"]
     }
   },
