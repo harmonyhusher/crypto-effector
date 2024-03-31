@@ -1,14 +1,10 @@
+"use client";
 import "@mantine/core/styles.css";
-import React from "react";
 import { ColorSchemeScript } from "@mantine/core";
 import { ThemeProvider } from "@/app/providers/ThemeProvider";
 import { QueryProvider } from "./providers/QueryProvider";
 import "../../public/styles/globals.scss";
-
-export const metadata = {
-  title: "Mantine Next.js template",
-  description: "I am using Mantine with Next.js!",
-};
+import { motion } from "framer-motion";
 
 export default function RootLayout({ children }: React.PropsWithChildren) {
   return (
@@ -21,11 +17,11 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
         />
       </head>
-      <body>
+      <motion.body dragConstraints={{ top: 10, bottom: 0 }}>
         <QueryProvider>
           <ThemeProvider>{children}</ThemeProvider>
         </QueryProvider>
-      </body>
+      </motion.body>
     </html>
   );
 }

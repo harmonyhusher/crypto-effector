@@ -1,16 +1,16 @@
 /* eslint-disable class-methods-use-this */
 import request from "@/shared/api/api";
-import { HTTPAuth, HTTPMethod } from "../../../shared/api/types";
-import { GraphI } from "./types";
+import { HTTPAuth, HTTPMethod } from "@/shared/api/types";
+import { GraphI, GraphIParams } from "./types";
 
 export class GraphApi {
-  async getGraphData() {
+  async getGraphData({ coinId, period }: GraphIParams) {
     const params = new URLSearchParams();
-    params.append("api_key", process.env.TOKEN as string);
+    period && params.append("period", period);
     const data = await request<GraphI>(
-      `/data/social/coin/histo/day?${params.toString()}`,
+      `/coins/${coinId}/charts?${params.toString()}`,
       HTTPMethod.GET,
-      HTTPAuth.XAPIKEY,
+      HTTPAuth.XAPIKEY
     );
     return data;
   }

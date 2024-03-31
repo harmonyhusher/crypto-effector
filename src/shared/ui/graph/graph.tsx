@@ -1,24 +1,13 @@
 import React from "react";
-import {
-  LineChart,
-  LineChartCurveType,
-  LineChartSeries,
-} from "@mantine/charts";
+import { LineChart } from "@mantine/charts";
+import { GraphI } from "@/entities/graph/model/store";
 
-type TickOrGrid = "xy" | "x" | "y" | "none" | undefined;
-
-type Props = {
-  data: Record<string, any>[];
-  series: LineChartSeries[];
-  dataKey: string;
-  settings: {
-    curveType: LineChartCurveType;
-    tickLine: TickOrGrid;
-    gridAxis: TickOrGrid;
-  };
-};
-
-export const LineGraph = ({ data, series, settings, dataKey }: Props) => {
+export const LineGraph = ({
+  data,
+  series,
+  settings,
+  dataKey,
+}: Omit<GraphI, "api">) => {
   return (
     <LineChart
       h={300}

@@ -16,7 +16,6 @@ export const CoinsList = () => {
   return (
     <Card withBorder padding={"xs"}>
       <Flex gap="md" direction="column" wrap="wrap" p={"sm"}>
-        <Input />
         <List data={data} isSuccess={isSuccess} isLoading={isLoading} />
       </Flex>
     </Card>
