@@ -17,11 +17,11 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
         />
       </head>
-      <motion.body dragConstraints={{ top: 10, bottom: 0 }}>
-        <QueryProvider>
-          <ThemeProvider>{children}</ThemeProvider>
-        </QueryProvider>
-      </motion.body>
+      <ThemeProvider>
+        <motion.body dragConstraints={{ top: 10, bottom: 0 }}>
+          <QueryProvider>{children}</QueryProvider>
+        </motion.body>
+      </ThemeProvider>
     </html>
   );
 }

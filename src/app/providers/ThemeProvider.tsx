@@ -51,8 +51,8 @@ export const ThemeProvider = ({ children }: React.PropsWithChildren) => {
       ],
     },
     shadows: {
-      md: "1px 1px 3px rgba(0, 0, 0, .25)",
-      xl: "5px 5px 3px rgba(0, 0, 0, .25)",
+      md: "1px 1px 3px rgba(34, 60, 80, 0.6)",
+      xl: "5px 5px 3px rgba(34, 60, 80, 0.6)",
     },
     headings: {
       sizes: {

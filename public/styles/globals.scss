@@ -2,6 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  transition: all 0.15s ease-in;
 }
 
 html,
@@ -11,4 +12,8 @@ body {
   position: absolute;
   scroll-behavior: smooth;
   overflow: hidden;
+}
+
+a {
+  text-decoration: none;
 }

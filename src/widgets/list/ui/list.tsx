@@ -10,14 +10,10 @@ type Props = {
 };
 
 export const List = ({ data, isLoading, isSuccess }: Props) => {
+  console.log(data)
   return (
-    <ScrollArea
-      h={600}
-      offsetScrollbars
-      scrollbarSize={3}
-      scrollHideDelay={500}
-    >
-      <Flex gap="md" justify="center" direction="column" wrap="wrap">
+    <ScrollArea h={600} offsetScrollbars scrollbarSize={3}>
+      <Flex gap="md" direction="column" wrap="wrap">
         {isSuccess &&
           data?.result.map(({ id, icon, name, symbol, price }) => {
             return (
@@ -28,6 +24,7 @@ export const List = ({ data, isLoading, isSuccess }: Props) => {
                 img={icon}
                 change={symbol}
                 bone={false}
+                coinId={id}
               />
             );
           })}

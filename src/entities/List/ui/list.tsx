@@ -14,8 +14,8 @@ export const CoinsList = () => {
     queryKey: ["list"],
   });
   return (
-    <Card withBorder padding={"xs"}>
-      <Flex gap="md" direction="column" wrap="wrap" p={"sm"}>
+    <Card withBorder>
+      <Flex gap="md" direction="column" pt={"sm"} px={"sm"}>
         <List data={data} isSuccess={isSuccess} isLoading={isLoading} />
       </Flex>
     </Card>

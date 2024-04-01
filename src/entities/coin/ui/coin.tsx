@@ -10,7 +10,6 @@ import { tabs } from "../lib/tabs";
 const instance = new CoinApi();
 
 export const Coin = () => {
-  const router = useRouter();
   const { coin } = useParams();
   const [selectedTab, setSelectedTab] = React.useState(tabs[0]);
   const { data, isLoading, isSuccess } = useQuery({
@@ -19,7 +18,7 @@ export const Coin = () => {
   });
   return (
     isSuccess && (
-      <>
+      <React.Fragment>
         <CoinImage icon={data.icon} />
         <CoinTabs
           data={data}
@@ -27,7 +26,7 @@ export const Coin = () => {
           selectedTab={selectedTab}
           setSelectedTab={setSelectedTab}
         />
-      </>
+      </React.Fragment>
     )
   );
 };
