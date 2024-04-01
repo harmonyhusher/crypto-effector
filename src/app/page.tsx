@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <Group>
       <DraggableList />
-      <Graph />
+      {/* <Graph /> */}
     </Group>
   );
 };

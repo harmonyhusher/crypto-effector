@@ -12,7 +12,7 @@ type Props = {
 export const List = ({ data, isLoading, isSuccess }: Props) => {
   return (
     <ScrollArea
-      h={550}
+      h={600}
       offsetScrollbars
       scrollbarSize={3}
       scrollHideDelay={500}

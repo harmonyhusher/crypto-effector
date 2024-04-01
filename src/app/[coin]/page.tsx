@@ -1,12 +1,7 @@
-import { CoinList } from "@/widgets/list";
+import { Coin } from "@/entities/coin";
 
 const Home = () => {
-  return (
-    <div>
-
-    </div>
-  );
+  return <Coin />;
 };
 
 export default Home;
-
