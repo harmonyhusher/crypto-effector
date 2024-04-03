@@ -13,7 +13,6 @@ export const Drawer = ({ opened, open, close }: Props) => {
       <MantineDrawer
         opened={opened}
         onClose={close}
-        title="Authentication"
       ></MantineDrawer>
       <Button onClick={open}>Open Drawer</Button>
     </React.Fragment>
