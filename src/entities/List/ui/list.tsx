@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { Card, Flex } from "@mantine/core";
-import { Input } from "@/shared/ui/Input";
 import { useQuery } from "@tanstack/react-query";
 import { ListApi } from "../api";
 import { List } from "@/widgets/list";
