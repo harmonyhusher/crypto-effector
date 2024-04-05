@@ -1,13 +1,29 @@
 "use client";
-import { Graph } from "@/entities/graph";
 import { DraggableList } from "@/features/draggable-list";
+import { Drawer } from "@/features/drawer";
+import { DrawerList } from "@/widgets/drawer-list";
+import { Header } from "@/widgets/header/ui/header";
 import { Group } from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
+import { motion } from "framer-motion";
+import React from "react";
+
 const Home = () => {
+  const [opened, { open, close }] = useDisclosure(false);
+  const constraintsRef = React.useRef(null);
+
   return (
-    <Group>
-      <DraggableList />
-      {/* <Graph /> */}
-    </Group>
+    <motion.div ref={constraintsRef}>
+      <Header opened={opened} open={open} />
+      <Group>
+        {opened && (
+          <Drawer opened={opened} close={close}>
+            <DrawerList />
+          </Drawer>
+        )}
+        <DraggableList />
+      </Group>
+    </motion.div>
   );
 };
 

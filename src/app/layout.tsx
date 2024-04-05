@@ -1,10 +1,8 @@
-"use client";
 import "@mantine/core/styles.css";
-import { ColorSchemeScript } from "@mantine/core";
+import { AppShell, ColorSchemeScript } from "@mantine/core";
 import { ThemeProvider } from "@/app/providers/ThemeProvider";
-import { QueryProvider } from "./providers/QueryProvider";
+import { QueryProvider } from "@/app/providers/QueryProvider";
 import "../../public/styles/globals.scss";
-import { motion } from "framer-motion";
 
 export default function RootLayout({ children }: React.PropsWithChildren) {
   return (
@@ -17,11 +15,20 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
         />
       </head>
-      <ThemeProvider>
-        <motion.body dragConstraints={{ top: 10, bottom: 0 }}>
-          <QueryProvider>{children}</QueryProvider>
-        </motion.body>
-      </ThemeProvider>
+      <body>
+        <ThemeProvider>
+          <QueryProvider>
+            <AppShell
+              header={{ height: 60, offset: false }}
+              zIndex={0}
+              layout="alt"
+              padding="md"
+            >
+              {children}
+            </AppShell>
+          </QueryProvider>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

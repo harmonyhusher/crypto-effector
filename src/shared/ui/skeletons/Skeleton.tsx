@@ -1,5 +1,5 @@
+import { ListSkeleton } from "./views/List";
 import { CoinSkeleton } from "./views/coin";
-import { ListSkeleton } from "./views/list";
 
 export type SkeletonVariant = "coin" | "list";
 

@@ -10,7 +10,6 @@ type Props = {
 };
 
 export const List = ({ data, isLoading, isSuccess }: Props) => {
-  console.log(data)
   return (
     <ScrollArea h={600} offsetScrollbars scrollbarSize={3}>
       <Flex gap="md" direction="column" wrap="wrap">
@@ -28,12 +27,11 @@ export const List = ({ data, isLoading, isSuccess }: Props) => {
               />
             );
           })}
+        {isLoading &&
+          Array.from({ length: 10 }).map((_, index) => (
+            <Coin key={index} bone={true} />
+          ))}
       </Flex>
-
-      {isLoading &&
-        Array.from({ length: 10 }).map((_, index) => (
-          <Coin key={index} bone={true} />
-        ))}
     </ScrollArea>
   );
 };

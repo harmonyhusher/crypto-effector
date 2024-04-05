@@ -4,7 +4,6 @@ import React from "react";
 import { Skeleton } from "@/shared/ui/skeletons";
 import { cutPrice } from "../lib/cutPrice";
 import cs from "./List.module.scss";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 type Props = {
@@ -28,8 +27,6 @@ export const Coin = ({
     return <Skeleton type={"coin"} />;
   }
 
-  const router = useRouter();
-
   return (
     <Link href={`/${coinId}`} target="_blank">
       <Card shadow="sm" radius="lg" className={cs.card}>
@@ -43,7 +40,7 @@ export const Coin = ({
           variant={"gradient"}
           gradient={{ from: "#e2e2e2", to: "cyan", deg: 90 }}
         >
-          $ {cutPrice(price as string)}
+          $ {price && cutPrice(price as string)}
         </Text>
         <Text
           size="sm"
