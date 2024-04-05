@@ -10,7 +10,7 @@ export const Settings = ({ onClick }: Props) => {
     <Flex gap={"md"}>
       {periods.map((item) => {
         return (
-          <Pill size={"lg"} onClick={onClick}>
+          <Pill size={"lg"} onClick={onClick} key={item}>
             {item}
           </Pill>
         );

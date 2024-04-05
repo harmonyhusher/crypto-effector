@@ -1,5 +1,6 @@
 import "@mantine/core/styles.css";
 import { AppShell, ColorSchemeScript } from "@mantine/core";
+
 import { ThemeProvider } from "@/app/providers/ThemeProvider";
 import { QueryProvider } from "@/app/providers/QueryProvider";
 import "../../public/styles/globals.scss";

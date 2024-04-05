@@ -1,7 +1,8 @@
 /* eslint-disable class-methods-use-this */
-import request from "@/shared/api/api";
-import { HTTPAuth, HTTPMethod } from "@/shared/api/types";
 import { GraphI, GraphIParams } from "./types";
+
+import { HTTPAuth, HTTPMethod } from "@/shared/api/types";
+import request from "@/shared/api/api";
 
 export class GraphApi {
   async getGraphData({ coinId, period }: GraphIParams) {

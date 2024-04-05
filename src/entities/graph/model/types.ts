@@ -1,4 +1,5 @@
 import { LineChartCurveType, LineChartSeries } from "@mantine/charts";
+
 import { GraphIParams } from "../api/types";
 
 type TickOrGrid = "xy" | "x" | "y" | "none" | undefined;

@@ -1,8 +1,8 @@
 export const allIngredients = [
-  { label: "Information" },
+  // { label: "Information" },
   { label: "Change" },
   { label: "Socials" },
 ];
 
-const [tomato, lettuce, cheese] = allIngredients;
-export const tabs = [tomato, lettuce, cheese];
+const [change, socials] = allIngredients;
+export const tabs = [change, socials];

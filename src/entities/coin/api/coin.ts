@@ -1,7 +1,9 @@
 /* eslint-disable class-methods-use-this */
-import request from "@/shared/api/api";
 import { HTTPAuth, HTTPMethod } from "../../../shared/api/types";
+
 import { ICoin } from "./types";
+
+import request from "@/shared/api/api";
 
 export class CoinApi {
   async getCoin(coinId: string) {

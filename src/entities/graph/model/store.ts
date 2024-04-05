@@ -1,6 +1,7 @@
 import { createStore } from "effector";
-import { changeApi, changeSettings } from "./events";
+
 import { GraphI } from "./types";
+import { changeApi, changeSettings } from "./events";
 
 const initState: GraphI = {
   data: [],

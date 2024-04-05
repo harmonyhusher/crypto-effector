@@ -1,8 +1,10 @@
 "use client";
 import React from "react";
-import { Card, Flex } from "@mantine/core";
 import { useQuery } from "@tanstack/react-query";
+import { Card, Flex } from "@mantine/core";
+
 import { ListApi } from "../api";
+
 import { List } from "@/widgets/list";
 
 const instance = new ListApi();

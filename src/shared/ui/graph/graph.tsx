@@ -1,6 +1,7 @@
 import React from "react";
 import { LineChart } from "@mantine/charts";
-import { GraphI } from "@/entities/graph/model/store";
+
+import { GraphI } from "@/entities/graph/model/types";
 
 export const LineGraph = ({
   data,

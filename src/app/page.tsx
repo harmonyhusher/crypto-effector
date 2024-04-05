@@ -1,12 +1,14 @@
 "use client";
-import { DraggableList } from "@/features/draggable-list";
-import { Drawer } from "@/features/drawer";
-import { DrawerList } from "@/widgets/drawer-list";
-import { Header } from "@/widgets/header/ui/header";
-import { Group } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
-import { motion } from "framer-motion";
 import React from "react";
+import { motion } from "framer-motion";
+import { useDisclosure } from "@mantine/hooks";
+import { Group } from "@mantine/core";
+
+import { Header } from "@/widgets/header/ui/header";
+import { DrawerList } from "@/widgets/drawer-list";
+import { Drawer } from "@/features/drawer";
+import { DraggableList } from "@/features/draggable-list";
+import { Graph } from "@/entities/graph";
 
 const Home = () => {
   const [opened, { open, close }] = useDisclosure(false);
@@ -22,6 +24,7 @@ const Home = () => {
           </Drawer>
         )}
         <DraggableList />
+        {/* <Graph/> */}
       </Group>
     </motion.div>
   );

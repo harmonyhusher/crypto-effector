@@ -1,6 +1,8 @@
 import React from "react";
 import { Flex, ScrollArea } from "@mantine/core";
+
 import { Coin } from "./coin";
+
 import { ListI } from "@/entities/list/api/types";
 
 type Props = {

@@ -1,10 +1,13 @@
-import { GraphApi } from "../api";
+import { useUnit } from "effector-react";
 import { useQuery } from "@tanstack/react-query";
 import { Card, Flex } from "@mantine/core";
-import { LineGraph } from "@/shared/ui/graph";
-import { useUnit } from "effector-react";
+
 import { $storeGraph } from "../model/store";
+import { GraphApi } from "../api";
+
 import { Settings } from "./settings";
+
+import { LineGraph } from "@/shared/ui/graph";
 
 const instance = new GraphApi();
 

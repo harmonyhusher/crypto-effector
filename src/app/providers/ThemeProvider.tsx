@@ -1,6 +1,5 @@
 import { createTheme, MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
-
 import React from "react";
 
 export const ThemeProvider = ({ children }: React.PropsWithChildren) => {
@@ -71,10 +70,8 @@ export const ThemeProvider = ({ children }: React.PropsWithChildren) => {
   });
 
   return (
-    <MantineProvider
-      theme={theme}
-      defaultColorScheme="dark"
-      children={children}
-    />
+    <MantineProvider theme={theme} defaultColorScheme="dark">
+      {children}
+    </MantineProvider>
   );
 };

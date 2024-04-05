@@ -1,7 +1,7 @@
+import React from "react";
 import {
   Input as MantineInput,
 } from "@mantine/core";
-import React from "react";
 
 type Props = {
   id: string;

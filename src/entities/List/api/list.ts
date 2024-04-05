@@ -1,7 +1,9 @@
 /* eslint-disable class-methods-use-this */
-import request from "@/shared/api/api";
 import { HTTPAuth, HTTPMethod } from "../../../shared/api/types";
+
 import { ListI, Meta } from "./types";
+
+import request from "@/shared/api/api";
 
 export class ListApi {
   async getList({ limit, page = 1 }: Partial<Meta>) {

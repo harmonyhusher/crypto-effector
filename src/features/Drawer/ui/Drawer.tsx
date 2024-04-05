@@ -1,5 +1,5 @@
-import { Drawer as MantineDrawer } from "@mantine/core";
 import React from "react";
+import { Drawer as MantineDrawer } from "@mantine/core";
 
 interface Props {
   opened: boolean;
