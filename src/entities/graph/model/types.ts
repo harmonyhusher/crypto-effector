@@ -5,7 +5,7 @@ import { GraphIParams } from "../api/types";
 type TickOrGrid = "xy" | "x" | "y" | "none" | undefined;
 
 export interface GraphI {
-  data: Record<string, any>[];
+  data: any[];
   series: LineChartSeries[];
   dataKey: string;
   api: GraphIParams;

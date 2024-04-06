@@ -12,7 +12,7 @@ import { LineGraph } from "@/shared/ui/graph";
 const instance = new GraphApi();
 
 export const Graph = () => {
-  const storeGraph = useUnit($storeGraph); // useStore is deprecated
+  const [storeGraph] = useUnit([$storeGraph]); // useStore is deprecated
 
   const { data, isSuccess } = useQuery({
     queryFn: () => instance.getGraphData(storeGraph.api),
@@ -25,14 +25,14 @@ export const Graph = () => {
     <Card withBorder padding={"xs"}>
       <Flex gap="md" direction="column" wrap="wrap" p={"sm"}>
         <Settings onClick={() => {}} />
-        {isSuccess && (
+        {/* {isSuccess && (
           <LineGraph
             settings={{ ...storeGraph.settings }}
             data={data}
             dataKey={data.timestamp}
-            series={data}
+            series={[{name: storeGraph.api.coinId, color: 'grey.6'}]}
           />
-        )}
+        )} */}
       </Flex>
     </Card>
   );
